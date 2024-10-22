@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Admission Pre-Qualification Table</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            border: 1px solid #ddd;
+            margin-bottom: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 6px;
+            box-sizing: border-box;
+        }
+
+        .documents-section {
+            margin: 20px 0;
+        }
+
+        .documents-section h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .document-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+        }
+
+        .document-details {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex: 1;
+        }
+
+        .document-name {
+            margin-right: 10px;
+        }
+        .button-apply-online {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+       }
+       .apply-button {
+            display: inline-block;
+            padding: 10px 30px;
+            background-color: #4CAF50;
+            color: #fff;
+            font-size: 18px;
+            text-decoration: none;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            transition: all 0.7s ease-in-out;
+       }
+       .apply-button:hover {
+            background-color: #45a049;
+            text-decoration: none;
+            color: #FFF;
+       }
+
+        @media only screen and (max-width: 768px) {
+            table {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Pre-Qualification Table for Online Admission</h1>
+    <table>
+        <tr>
+            <th>Examination</th>
+            <th>Roll No</th>
+            <th>Year of Passing</th>
+            <th>Obtain Marks</th>
+            <th>Total Marks</th>
+            <th>Percentage</th>
+            <th>Board/University</th>
+        </tr>
+        <tr>
+            <td>SSC-II</td>
+            <td><input type="text" placeholder="Enter Roll No"></td>
+            <td><input type="text" placeholder="Enter Year of Passing"></td>
+            <td><input type="text" placeholder="Enter Obtain Marks"></td>
+            <td><input type="text" placeholder="Enter Total Marks"></td>
+            <td><input type="text" placeholder="Enter Percentage"></td>
+            <td><input type="text" placeholder="Enter Board/University"></td>
+        </tr>
+    </table>
+
+    <div class="documents-section">
+        <h2>Required Attested Documents</h2>
+        <div class="document-item">
+            <div class="document-details">
+                <span class="document-name">Marksheet</span>
+                <span class="document-copies">2 copies</span>
+            </div>
+        </div>
+        <div class="document-item">
+            <div class="document-details">
+                <span class="document-name">Photograph Passport Size</span>
+                <span class="document-copies">2 copies</span>
+            </div>
+        </div>
+        <div class="document-item">
+            <div class="document-details">
+                <span class="document-name">CNIC of Father/Guardian</span>
+                <span class="document-copies">1 copy</span>
+            </div>
+        </div>
+        <div class="document-item">
+            <div class="document-details">
+                <span class="document-name">Domicile</span>
+                <span class="document-copies">2 copies</span>
+            </div>
+        </div>
+        <div class="document-item">
+            <div class="document-details">
+                <span class="document-name">Character Certificate</span>
+                <span class="document-copies">1 copy</span>
+            </div>
+        </div>
+        <div class="button-apply-online">
+            <a href="affidivit.html" class="apply-button">Go Next</a>
+        </div>
+    </div>
+</body>
+</html>

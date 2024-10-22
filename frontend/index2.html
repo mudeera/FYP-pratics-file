@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation bar with Drop-doen menu</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/all.min.css">
+<style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            font-family: sans-serif;
+            height: 600px;
+            width: 100%;
+            background-image: url("./images/IMG-20230803-WA0004.jpg");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 100% 100%;
+            animation-name: myanim;
+            animation-duration: 5s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+        }
+        @keyframes myanim {
+            0%{background-image: url("./images/IMG-20230803-WA0004.jpg");}
+            35%{background-image: url("./images/IMG-20230803-WA0005.jpg");}
+            75%{background-image: url("./images/IMG-20230803-WA0006.jpg");}
+        }
+        .nav-bar{
+            background-color: rgb(0, 100, 0);
+            text-align: center;
+        }
+        .nav-bar ul{
+            display: inline-flex;
+            list-style: none;
+            color: azure;
+        }
+        .nav-bar ul li{
+            width: 120px;
+            margin: 15px;
+            padding: 15px 5px;
+        }
+        .nav-bar ul li a{
+            text-decoration: none;
+            color: azure;
+        }
+        .nav-bar ul li :hover{
+            background-color: rgb(0, 100, 0);
+            border-radius: 3px;
+        } 
+        .nav-bar .fa{
+            margin-right: 8px;
+        }
+        .sub-menu-1{
+            display: none;
+        }
+        .nav-bar ul li:hover .sub-menu-1{
+            display: block;
+            position: absolute;
+            background-color: rgb(0, 100, 0);
+            margin-top: 15px;
+            margin-left: -15px;
+        }
+        .nav-bar ul li:hover .sub-menu-1 ul{
+            display: block;
+            margin: 10px;
+        }
+        .nav-bar ul li:hover .sub-menu-1 ul li{
+            width: 150px;
+            padding: 10px;
+            border-bottom: 1px dotted #fff;
+            background: transparent;
+            border-radius: 0;
+            text-align: left;
+        }
+        .nav-bar ul li:hover .sub-menu-1 ul li:last-child{
+            border-bottom: none;
+        }
+        .nav-bar ul li:hover .sub-menu-1 ul li a:hover{
+            color: rgb(121, 255, 121);
+        }
+        .fa-angle-right{
+            float: right;
+        }
+        .fa-chevron-down{
+            float: right;
+            margin-left: -10%;
+        }
+        .sub-menu-2{
+            display: none;
+        }
+        .hover-me:hover .sub-menu-2{
+            position: absolute;
+            display: block;
+            margin-top: -18px;
+            margin-left: 140px;
+            background: rgb(0, 100, 0);
+        }
+    /* Existing styles */
+
+    @media (max-width: 768px) {
+        .nav-bar ul {
+            flex-direction: column;
+            text-align: left;
+        }
+        .nav-bar ul li {
+            margin: 10px;
+        }
+        .sub-menu-1, .sub-menu-2 {
+            position: static;
+            display: none;
+            background: transparent;
+        }
+        .nav-bar ul li:hover .sub-menu-1,
+        .hover-me:hover .sub-menu-2 {
+            display: none;
+        }
+        .nav-bar ul li:hover .sub-menu-1 ul,
+        .hover-me:hover .sub-menu-2 ul {
+            display: block;
+        }
+        .nav-bar ul li:hover .sub-menu-1 ul li,
+        .hover-me:hover .sub-menu-2 ul li {
+            width: 100%;
+            padding: 10px;
+            text-align: left;
+            border-bottom: none;
+        }
+    }
+
+    @media (max-width: 500px) {
+        /* Repeating styles from the 768px media query for screens smaller than 500px */
+        .nav-bar ul {
+            flex-direction: column;
+            text-align: left;
+        }
+        .nav-bar ul li {
+            margin: 10px;
+        }
+        .sub-menu-1, .sub-menu-2 {
+            position: static;
+            display: none;
+            background: transparent;
+        }
+        .nav-bar ul li:hover .sub-menu-1,
+        .hover-me:hover .sub-menu-2 {
+            display: none;
+        }
+        .nav-bar ul li:hover .sub-menu-1 ul,
+        .hover-me:hover .sub-menu-2 ul {
+            display: block;
+        }
+        .nav-bar ul li:hover .sub-menu-1 ul li,
+        .hover-me:hover .sub-menu-2 ul li {
+            width: 100%;
+            padding: 10px;
+            text-align: left;
+            border-bottom: none;
+        }
+    }
+</style>
+</head>
+<body>
+<div class="nav-bar">
+    <ul>
+        <li><a href="#"><i class="fa fa-home"></i>Home</a></li>
+        <li><a href="#"><i class="fa-solid fa-chevron-down"></i>About</a>
+            <div class="sub-menu-1">
+                <ul>
+                    <li><a href="#">Introduction</a></li>
+                    <li><a href="#">Vision</a></li>
+                    <li><a href="#">Mission</a></li>
+                    <li><a href="#">Goals</a></li>
+                </ul>
+            </div>
+        </li>
+        <li><a href="#"><i class="fa-solid fa-chevron-down"></i>Admission</a>
+            <div class="sub-menu-1">
+                <ul>
+                    <li><a href="policy.html"><i class="fa fa-angle-right"></i>Admission Policy</a></li>
+                    <li><a href="Scheme Of Studies.html"><i class="fa fa-angle-right"></i>Scheme of Studies</a></li>
+                   
+                </ul>
+            </div>
+        </li>
+        <li><a href="#"><i class="fa-solid fa-chevron-down"></i>Faculties</a>
+            <div class="sub-menu-1">
+                <ul>
+                    <li class="hover-me"><a href="#"><i class="fa fa-angle-right"></i>ICS</a>
+                        <div class="sub-menu-2">
+                            <ul>
+                                <li><a href="#">Madam-Salima</a></li>
+                                <li><a href="#">Madam-Khadija</a></li>
+                                <li><a href="#">Madam-Rehana</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="#"><i class="fa fa-angle-right"></i>FA</a></li>
+                    <li><a href="#"><i class="fa fa-angle-right"></i>FSc</a></li>
+                </ul>
+            </div>
+        </li>
+        <li><a href="#"><i class="fa fa-phone"></i>Contact Us</a></li>
+        <li><a href="#">News & Events</a></li>
+    </ul>
+</div>    
+</body>
+</html>

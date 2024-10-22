@@ -1,0 +1,21 @@
+.container {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  }
+    .header-scheme{
+    text-align: center;
+    padding-top: 10px;
+    font-weight: 200;
+    color: rgb(243, 216, 40);
+    background-color: #007bff;
+    margin-left: 26px;
+    width: 700px;
+    height: 85px;
+  }
+  .content-list{
+    font-family: Arial, Helvetica;
+  }
